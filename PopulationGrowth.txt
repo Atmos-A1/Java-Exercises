@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class PopulationGrowth {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter current world population: ");
+        long population = input.nextLong();
+
+        System.out.print("Enter annual growth rate (as decimal): ");
+        double rate = input.nextDouble();
+
+        double year1 = population * (1 + rate);
+        double year2 = year1 * (1 + rate);
+        double year3 = year2 * (1 + rate);
+        double year4 = year3 * (1 + rate);
+        double year5 = year4 * (1 + rate);
+
+        System.out.printf("Year 1: %.0f%n", year1);
+        System.out.printf("Year 2: %.0f%n", year2);
+        System.out.printf("Year 3: %.0f%n", year3);
+        System.out.printf("Year 4: %.0f%n", year4);
+        System.out.printf("Year 5: %.0f%n", year5);
+    }
+}
